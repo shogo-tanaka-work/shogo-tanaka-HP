@@ -1,8 +1,8 @@
 "use client"
 
-import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { webApps } from "@/data"
+import Image from "next/image"
 
 export function PortfolioSection() {
   return (
@@ -29,7 +29,7 @@ export function PortfolioSection() {
           >
             <div className="relative w-full h-32">
               <Image
-                src={app.image || "/placeholder.svg?height=128&width=400&query=web application screenshot"}
+                src={app.image || "/assets/images/placeholders/placeholder.svg?height=128&width=400&query=web application screenshot"}
                 alt={app.title}
                 fill
                 className="object-cover rounded-t-lg"

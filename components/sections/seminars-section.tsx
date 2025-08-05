@@ -1,8 +1,8 @@
-import { Calendar, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import Image from "next/image"
 import { upcomingSeminars } from "@/data"
+import { Calendar, Clock } from "lucide-react"
+import Image from "next/image"
 
 export function SeminarsSection() {
   return (
@@ -20,7 +20,7 @@ export function SeminarsSection() {
             }}
           >
             <div className="relative w-full h-32">
-              <Image src="/placeholder.svg?height=128&width=400" alt={seminar.title} fill className="object-cover" />
+              <Image src="/assets/images/placeholders/placeholder.svg?height=128&width=400" alt={seminar.title} fill className="object-cover" />
               <div className="absolute top-2 right-2">
                 <span
                   className={`px-2 py-1 text-xs rounded-full font-medium ${

@@ -1,5 +1,5 @@
-import { Instagram, Twitter, Youtube, Github, Mail, Globe } from "lucide-react"
-import type { SocialLink, WebApp, TeachingExperience, Seminar } from "@/types"
+import type { Seminar, SocialLink, TeachingExperience, WebApp } from "@/types"
+import { Github, Globe, Instagram, Mail, Twitter, Youtube } from "lucide-react"
 
 export const socialLinks: SocialLink[] = [
   {
@@ -39,28 +39,28 @@ export const webApps: WebApp[] = [
     title: "ECサイト管理システム",
     description: "商品管理・在庫管理・売上分析機能を備えたECサイト",
     technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    image: "/placeholder.svg?height=60&width=60",
+    image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
     url: "#",
   },
   {
     title: "タスク管理アプリ",
     description: "チーム向けのリアルタイムタスク管理・進捗追跡システム",
     technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    image: "/placeholder.svg?height=60&width=60",
+    image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
     url: "#",
   },
   {
     title: "予約管理システム",
     description: "美容院・クリニック向けの予約・顧客管理システム",
     technologies: ["Vue.js", "Express", "MySQL", "Stripe"],
-    image: "/placeholder.svg?height=60&width=60",
+    image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
     url: "#",
   },
   {
     title: "データ分析ダッシュボード",
     description: "売上・アクセス解析のリアルタイム可視化ツール",
     technologies: ["React", "D3.js", "Python", "FastAPI"],
-    image: "/placeholder.svg?height=60&width=60",
+    image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
     url: "#",
   },
 ]
