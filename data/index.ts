@@ -1,65 +1,34 @@
 import type { Seminar, SocialLink, TeachingExperience, WebApp } from "@/types"
-import { Github, Globe, Instagram, Mail, Twitter, Youtube } from "lucide-react"
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export const socialLinks: SocialLink[] = [
   {
-    name: "Website",
-    url: "#",
-    icon: Globe,
-  },
-  {
-    name: "Twitter",
-    url: "#",
+    name: "X",
+    url: "https://x.com/shogo_works",
     icon: Twitter,
   },
   {
     name: "Instagram",
-    url: "#",
+    url: "https://www.instagram.com/shogoworks/?next=%2F",
     icon: Instagram,
   },
   {
-    name: "YouTube",
-    url: "#",
-    icon: Youtube,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/shogoworks/",
+    icon: Linkedin,
   },
   {
     name: "GitHub",
-    url: "#",
+    url: "https://github.com/shogo-tanaka-work",
     icon: Github,
-  },
-  {
-    name: "Contact",
-    url: "#",
-    icon: Mail,
   },
 ]
 
 export const webApps: WebApp[] = [
   {
-    title: "ECサイト管理システム",
+    title: "筋トレ記録・分析アプリ",
     description: "商品管理・在庫管理・売上分析機能を備えたECサイト",
     technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
-    url: "#",
-  },
-  {
-    title: "タスク管理アプリ",
-    description: "チーム向けのリアルタイムタスク管理・進捗追跡システム",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
-    url: "#",
-  },
-  {
-    title: "予約管理システム",
-    description: "美容院・クリニック向けの予約・顧客管理システム",
-    technologies: ["Vue.js", "Express", "MySQL", "Stripe"],
-    image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
-    url: "#",
-  },
-  {
-    title: "データ分析ダッシュボード",
-    description: "売上・アクセス解析のリアルタイム可視化ツール",
-    technologies: ["React", "D3.js", "Python", "FastAPI"],
     image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
     url: "#",
   },
@@ -67,57 +36,39 @@ export const webApps: WebApp[] = [
 
 export const teachingExperience: TeachingExperience[] = [
   {
-    title: "AI基礎コース講師",
-    organization: "TechAI Academy",
-    period: "2023年4月 - 現在",
-    students: "200+",
-    description: "機械学習・深層学習の基礎から実践まで幅広く指導",
-    type: "toB",
+    title: "AI講師（業務活用）",
+    organization: "byTech",
+    period: "2025年5月 - 現在",
+    students: "30+",
+    description: "AI活用の基礎から実践まで幅広く指導",
+    type: "toC",
   },
   {
     title: "ChatGPT活用セミナー",
-    organization: "ビジネスAI研修センター",
-    period: "2023年6月 - 現在",
-    students: "150+",
-    description: "企業向けChatGPT導入・活用方法の研修",
-    type: "toB",
+    organization: "オンライン",
+    period: "2025年5月 - 現在",
+    students: "50+",
+    description: "ChatGPT導入・活用方法の研修",
+    type: "toC",
   },
   {
-    title: "プログラミング入門講座",
-    organization: "市民向けITスクール",
-    period: "2022年10月 - 現在",
-    students: "300+",
-    description: "初心者向けWeb開発・AI入門講座",
+    title: "MCP入門セミナー",
+    organization: "オンライン",
+    period: "2025年6月 - 現在",
+    students: "30+",
+    description: "MCPの解説、活用方法紹介",
     type: "toC",
   },
 ]
 
 export const upcomingSeminars: Seminar[] = [
   {
-    title: "生成AI活用術 - ビジネス現場での実践方法",
-    date: "2024年2月15日",
-    time: "14:00 - 16:00",
-    venue: "オンライン",
-    capacity: "50名",
-    price: "¥5,000",
-    status: "募集中",
-  },
-  {
-    title: "ChatGPT×Excel自動化セミナー",
-    date: "2024年2月28日",
-    time: "19:00 - 21:00",
-    venue: "東京会場",
-    capacity: "30名",
-    price: "¥8,000",
-    status: "残り5席",
-  },
-  {
-    title: "AI時代のキャリア戦略セミナー",
-    date: "2024年3月10日",
-    time: "10:00 - 12:00",
+    title: "ChatGPT5解説、活用方法紹介",
+    date: "2025年8月19日",
+    time: "20:00 - 21:00",
     venue: "オンライン",
     capacity: "100名",
-    price: "¥3,000",
+    price: "無料",
     status: "募集中",
   },
 ]

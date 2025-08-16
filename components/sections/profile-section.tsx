@@ -13,14 +13,15 @@ export function ProfileSection() {
           style={{ borderColor: "#D4AF37", boxShadow: "0 10px 25px rgba(212, 175, 55, 0.2)" }}
         />
       </div>
+      <h1 className="text-2xl font-bold text-white mb-2">(編集中)</h1>
       <h1 className="text-2xl font-bold text-white mb-2">田中 省伍</h1>
       <p className="text-sm mb-3 font-medium" style={{ color: "#D4AF37" }}>
-        Web Developer & AI Instructor
+        システムエンジニア & AI講師
       </p>
-      <p className="text-gray-300 text-xs leading-relaxed px-4">
-        フロントエンド開発とAI技術指導を専門としています。
+      <p className="text-gray-300 text-xs leading-relaxed px-0">
+        Webアプリケーション開発とAI技術指導やAI導入支援を専門としています。
         <br />
-        企業・個人向けにAI活用セミナーを開催中。
+        企業・個人向けにAI活用セミナーやレッスンも開催中。
       </p>
     </div>
   )
