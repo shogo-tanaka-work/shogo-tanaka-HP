@@ -5,12 +5,15 @@ export function ProfileSection() {
     <div className="text-center mb-8">
       <div className="relative w-24 h-24 mx-auto mb-4">
         <Image
-          src="/assets/images/placeholders/placeholder.svg?height=96&width=96"
+          src="/assets/images/0038f.jpg"
           alt="Profile Photo"
-          width={96}
-          height={96}
+          fill
           className="rounded-full object-cover border-4 shadow-lg"
-          style={{ borderColor: "#D4AF37", boxShadow: "0 10px 25px rgba(212, 175, 55, 0.2)" }}
+          style={{ 
+            borderColor: "#D4AF37", 
+            boxShadow: "0 10px 25px rgba(212, 175, 55, 0.2)",
+            objectPosition: "center 25%"
+          }}
         />
       </div>
       <h1 className="text-2xl font-bold text-white mb-2">(編集中)</h1>
