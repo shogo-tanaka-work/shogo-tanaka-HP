@@ -27,10 +27,10 @@ export const socialLinks: SocialLink[] = [
 export const webApps: WebApp[] = [
   {
     title: "筋トレ記録・分析アプリ",
-    description: "商品管理・在庫管理・売上分析機能を備えたECサイト",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    description: "筋トレ記録・分析アプリ",
+    technologies: ["TypeScript", "Material UI", "PostgreSQL"],
     image: "/assets/images/placeholders/placeholder.svg?height=60&width=60",
-    url: "#",
+    url: "https://gosho-techplay.com/workout/top",
   },
 ]
 
