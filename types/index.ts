@@ -19,6 +19,7 @@ export interface TeachingExperience {
   students: string
   description: string
   type: "toB" | "toC"
+  url?: string
 }
 
 export interface Seminar {
@@ -29,4 +30,15 @@ export interface Seminar {
   capacity: string
   price: string
   status: string
+}
+
+export interface SkillItem {
+  name: string
+  level: 1 | 2 | 3 | 4 | 5
+}
+
+export interface SkillsByCategory {
+  frontend: SkillItem[]
+  backend: SkillItem[]
+  infra: SkillItem[]
 }

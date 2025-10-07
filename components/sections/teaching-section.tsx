@@ -3,21 +3,36 @@ import { Card } from "@/components/ui/card"
 import { teachingExperience } from "@/data"
 
 export function TeachingSection() {
+  const isValidUrl = (url?: string): boolean => {
+    if (!url || url.trim() === "" || url === "#") return false
+    return true
+  }
   return (
     <div className="mb-8">
       <h2 className="text-lg font-bold text-white mb-4 text-center">講師実績</h2>
       <div className="space-y-4">
-        {teachingExperience.map((experience, index) => (
-          <Card
-            key={index}
-            className="border transition-all duration-300 hover:shadow-lg backdrop-blur-sm"
-            style={{
-              backgroundColor: "rgba(51, 51, 51, 0.6)",
-              borderColor: "rgba(212, 175, 55, 0.2)",
-              boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
-            }}
-          >
-            <div className="p-4">
+        {teachingExperience.map((experience, index) => {
+          const clickable = isValidUrl(experience.url)
+          return (
+            <Card
+              key={index}
+              className={`border transition-all duration-300 hover:shadow-lg backdrop-blur-sm ${clickable ? "cursor-pointer" : "cursor-default"}`}
+              style={{
+                backgroundColor: "rgba(51, 51, 51, 0.6)",
+                borderColor: "rgba(212, 175, 55, 0.2)",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+              }}
+              onClick={() => {
+                if (clickable) window.open(experience.url, "_blank", "noopener,noreferrer")
+              }}
+              onMouseEnter={(e) => {
+                if (clickable) e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.4)"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.2)"
+              }}
+            >
+              <div className="p-4">
               <div className="flex items-start justify-between mb-2">
                 <div className="flex-1">
                   <h3 className="font-semibold text-white text-sm mb-1">{experience.title}</h3>
@@ -49,9 +64,10 @@ export function TeachingSection() {
                   </span>
                 </div>
               </div>
-            </div>
-          </Card>
-        ))}
+              </div>
+            </Card>
+          )
+        })}
       </div>
     </div>
   )

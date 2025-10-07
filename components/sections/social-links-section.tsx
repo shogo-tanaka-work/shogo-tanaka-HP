@@ -7,15 +7,15 @@ export function SocialLinksSection() {
   return (
     <div className="mb-8">
       <h2 className="text-lg font-bold text-white mb-4 text-center">SNS</h2>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="flex justify-center items-center flex-wrap gap-2 sm:gap-3 md:gap-4 max-w-[280px] md:max-w-[360px] mx-auto">
         {socialLinks.map((link, index) => {
           const IconComponent = link.icon
           return (
             <Button
               key={index}
               variant="ghost"
-              size="lg"
-              className="aspect-square p-3 transition-all duration-200 hover:scale-105 rounded-xl flex items-center justify-center"
+              size="sm"
+              className="w-20 h-20 p-0 transition-all duration-200 hover:scale-105 rounded-xl flex items-center justify-center"
               style={{
                 background: "linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)",
                 color: "#2b2b2b",

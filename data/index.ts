@@ -1,4 +1,4 @@
-import type { Seminar, SocialLink, TeachingExperience, WebApp } from "@/types"
+import type { Seminar, SocialLink, TeachingExperience, WebApp, SkillsByCategory } from "@/types"
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export const socialLinks: SocialLink[] = [
@@ -50,6 +50,7 @@ export const teachingExperience: TeachingExperience[] = [
     students: "50+",
     description: "ChatGPT導入・活用方法の研修",
     type: "toC",
+    url: "https://example.com/seminar/chatgpt"
   },
   {
     title: "MCP入門セミナー",
@@ -72,3 +73,21 @@ export const upcomingSeminars: Seminar[] = [
     status: "募集中",
   },
 ]
+
+export const skills: SkillsByCategory = {
+  frontend: [
+    { name: "React/Next.js", level: 4 },
+    { name: "TypeScript", level: 4 },
+    { name: "Tailwind CSS", level: 4 },
+  ],
+  backend: [
+    { name: "Node.js", level: 3 },
+    { name: "REST/GraphQL", level: 3 },
+    { name: "PostgreSQL", level: 3 },
+  ],
+  infra: [
+    { name: "Vercel", level: 4 },
+    { name: "Docker", level: 2 },
+    { name: "AWS", level: 2 },
+  ],
+}
