@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
-import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { useEffect, useState } from "react"
 
 export function ContactSection() {
   const [name, setName] = useState("")
@@ -12,6 +12,15 @@ export function ContactSection() {
   const [message, setMessage] = useState("")
   const [status, setStatus] = useState<null | "idle" | "sending" | "ok" | "error">("idle")
   const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (status === "ok") {
+      const timer = setTimeout(() => {
+        setStatus("idle")
+      }, 3000)
+      return () => clearTimeout(timer)
+    }
+  }, [status])
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -50,8 +59,25 @@ export function ContactSection() {
           <Input placeholder="お名前" value={name} onChange={(e) => setName(e.target.value)} required />
           <Input type="email" placeholder="メールアドレス" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <Textarea placeholder="お問い合わせ内容" value={message} onChange={(e) => setMessage(e.target.value)} required rows={5} />
-          <div className="flex justify-end">
-            <Button type="submit" disabled={status === "sending"}>
+          <div className="flex justify-center">
+            <Button 
+              type="submit" 
+              disabled={status === "sending"}
+              className="px-8 py-5 text-base font-semibold transition-all duration-200 hover:scale-105 rounded-lg"
+              style={{
+                background: "linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)",
+                color: "#2b2b2b",
+                boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)",
+              }}
+              onMouseEnter={(e) => {
+                if (status !== "sending") {
+                  e.currentTarget.style.boxShadow = "0 6px 20px rgba(212, 175, 55, 0.4)"
+                }
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 4px 15px rgba(212, 175, 55, 0.3)"
+              }}
+            >
               {status === "sending" ? "送信中..." : "送信"}
             </Button>
           </div>

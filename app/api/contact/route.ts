@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
@@ -14,9 +14,14 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Resend API key not configured" }, { status: 500 })
     }
 
+    const contactEmail = process.env.CONTACT_EMAIL
+    if (!contactEmail) {
+      return NextResponse.json({ error: "Contact email not configured" }, { status: 500 })
+    }
+
     const payload = {
-      from: "portfolio@shogoworks.dev",
-      to: ["owner@example.com"],
+      from: contactEmail,
+      to: [email],
       subject: `お問い合わせ: ${name}`,
       text: `From: ${name} <${email}>\n\n${message}`,
     }
