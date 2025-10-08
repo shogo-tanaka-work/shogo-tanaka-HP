@@ -1,4 +1,4 @@
-import type { Seminar, SocialLink, TeachingExperience, WebApp, SkillsByCategory } from "@/types"
+import type { Seminar, SkillsByCategory, SocialLink, TeachingExperience, WebApp } from "@/types"
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export const socialLinks: SocialLink[] = [
@@ -55,8 +55,8 @@ export const teachingExperience: TeachingExperience[] = [
   {
     title: "MCP入門セミナー",
     organization: "オンライン",
-    period: "2025年6月 - 現在",
-    students: "30+",
+    period: "2025年6月",
+    students: "20+",
     description: "MCPの解説、活用方法紹介",
     type: "toC",
   },
@@ -65,7 +65,7 @@ export const teachingExperience: TeachingExperience[] = [
 export const upcomingSeminars: Seminar[] = [
   {
     title: "ChatGPT5解説、活用方法紹介",
-    date: "2025年8月19日",
+    date: "2025年10月末日",
     time: "20:00 - 21:00",
     venue: "オンライン",
     capacity: "100名",
@@ -76,18 +76,32 @@ export const upcomingSeminars: Seminar[] = [
 
 export const skills: SkillsByCategory = {
   frontend: [
-    { name: "React/Next.js", level: 4 },
-    { name: "TypeScript", level: 4 },
-    { name: "Tailwind CSS", level: 4 },
+    { name: "HTML/CSS", level: 3 },
+    { name: "JavaScript", level: 4 },
+    { name: "TypeScript", level: 3 },
+    { name: "React/Next.js", level: 3 },
+    { name: "Sass", level: 2 },
+    { name: "Tailwind CSS", level: 2 },
+
   ],
   backend: [
     { name: "Node.js", level: 3 },
-    { name: "REST/GraphQL", level: 3 },
-    { name: "PostgreSQL", level: 3 },
+    { name: "Python", level: 2 },
+    { name: "REST API/Graph API", level: 3 },
+    { name: "PostgreSQL", level: 2 },
+    { name: "MySQL", level: 2 },
+    { name: "MongoDB", level: 3 },
+    { name: "Supabase", level: 2 },
+    { name: "Dify", level: 3 },
   ],
   infra: [
-    { name: "Vercel", level: 4 },
+    { name: "Git", level: 3 },
+    { name: "GitHub", level: 3 },
+    { name: "GitLab", level: 3 },
+    { name: "Vercel", level: 2 },
     { name: "Docker", level: 2 },
-    { name: "AWS", level: 2 },
+    { name: "Azure", level: 3 },
+    { name: "GCP", level: 1 },
+    { name: "AWS", level: 1 },
   ],
 }
