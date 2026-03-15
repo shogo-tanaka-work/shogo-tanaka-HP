@@ -1,0 +1,132 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "shogoworks" [ref=e5] [cursor=pointer]:
+      - /url: /
+  - generic [ref=e6]:
+    - link "トップページに戻る" [ref=e7] [cursor=pointer]:
+      - /url: /
+      - img [ref=e8]
+      - generic [ref=e10]: トップページに戻る
+    - heading "利用規約" [level=1] [ref=e11]
+    - paragraph [ref=e12]: "最終更新日: 2025年2月4日"
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "1. はじめに" [level=2] [ref=e16]
+        - paragraph [ref=e17]: この利用規約（以下「本規約」）は、shogoworks（以下「当サービス」）が提供するウェブサイトおよび関連サービスの利用条件を定めるものです。
+        - paragraph [ref=e18]: 当サービスをご利用いただく前に、本規約をよくお読みください。当サービスにアクセスまたは利用することにより、本規約に同意したものとみなされます。本規約に同意いただけない場合は、当サービスをご利用いただくことはできません。
+      - generic [ref=e19]:
+        - heading "2. サービスの説明" [level=2] [ref=e20]
+        - paragraph [ref=e21]: 当サービスは、以下の機能を提供します：
+        - list [ref=e22]:
+          - listitem [ref=e23]: ポートフォリオおよびプロフィール情報の閲覧
+          - listitem [ref=e24]: お問い合わせフォームによる連絡機能
+          - listitem [ref=e25]: TikTok APIを活用した各種機能（該当する場合）
+          - listitem [ref=e26]: その他、当サービスが提供するコンテンツおよび機能
+      - generic [ref=e27]:
+        - heading "3. TikTok APIの利用について" [level=2] [ref=e28]
+        - paragraph [ref=e29]: 当サービスは、TikTok for Developers APIを利用しています。TikTok APIを利用する機能を使用する場合、以下の条件に同意していただく必要があります：
+        - heading "3.1 認証と同意" [level=3] [ref=e30]
+        - list [ref=e31]:
+          - listitem [ref=e32]: TikTokアカウントとの連携には、TikTokの認証プロセスを通じた明示的な同意が必要です
+          - listitem [ref=e33]: ユーザーは、当サービスがアクセスする情報の範囲を確認した上で同意を行います
+          - listitem [ref=e34]: 同意はいつでも撤回でき、連携を解除することができます
+        - heading "3.2 データの取り扱い" [level=3] [ref=e35]
+        - list [ref=e36]:
+          - listitem [ref=e37]: TikTok APIを通じて取得したデータは、当サービスの機能提供にのみ使用されます
+          - listitem [ref=e38]: ユーザーの同意なく、データを第三者に販売、共有、または転送することはありません
+          - listitem [ref=e39]: 連携解除時には、TikTok APIを通じて取得したデータを削除します
+        - heading "3.3 TikTokの規約への準拠" [level=3] [ref=e40]
+        - paragraph [ref=e41]:
+          - text: 当サービスの利用にあたっては、TikTokの
+          - link "利用規約" [ref=e42] [cursor=pointer]:
+            - /url: https://www.tiktok.com/legal/terms-of-service
+          - text: および
+          - link "コミュニティガイドライン" [ref=e43] [cursor=pointer]:
+            - /url: https://www.tiktok.com/community-guidelines
+          - text: も遵守していただく必要があります。
+      - generic [ref=e44]:
+        - heading "4. ユーザーの責任" [level=2] [ref=e45]
+        - paragraph [ref=e46]: 当サービスをご利用いただくにあたり、ユーザーは以下の事項を遵守していただく必要があります：
+        - list [ref=e47]:
+          - listitem [ref=e48]: 正確かつ最新の情報を提供すること
+          - listitem [ref=e49]: アカウント情報（該当する場合）の機密性を維持すること
+          - listitem [ref=e50]: 適用されるすべての法令および規則を遵守すること
+          - listitem [ref=e51]: 他のユーザーまたは第三者の権利を侵害しないこと
+          - listitem [ref=e52]: 当サービスのセキュリティを損なう行為を行わないこと
+      - generic [ref=e53]:
+        - heading "5. 禁止事項" [level=2] [ref=e54]
+        - paragraph [ref=e55]: ユーザーは、当サービスの利用にあたり、以下の行為を行ってはなりません：
+        - list [ref=e56]:
+          - listitem [ref=e57]: 法令または公序良俗に違反する行為
+          - listitem [ref=e58]: 犯罪行為に関連する行為
+          - listitem [ref=e59]: 当サービスのサーバーまたはネットワークの機能を破壊したり、妨害したりする行為
+          - listitem [ref=e60]: 当サービスの運営を妨害するおそれのある行為
+          - listitem [ref=e61]: 他のユーザーに関する個人情報等を収集または蓄積する行為
+          - listitem [ref=e62]: 他のユーザーに成りすます行為
+          - listitem [ref=e63]: 当サービスに関連して、反社会的勢力に対して直接または間接に利益を供与する行為
+          - listitem [ref=e64]: 当サービスのコンテンツを無断で複製、改変、または再配布する行為
+          - listitem [ref=e65]: スパム、フィッシング、またはその他の悪意ある行為
+          - listitem [ref=e66]: TikTok APIを不正に使用する行為
+          - listitem [ref=e67]: その他、当サービスが不適切と判断する行為
+      - generic [ref=e68]:
+        - heading "6. 知的財産権" [level=2] [ref=e69]
+        - paragraph [ref=e70]: 当サービスに掲載されているコンテンツ（テキスト、画像、ロゴ、デザイン、ソフトウェア等）に関する知的財産権は、当サービスまたは正当な権利者に帰属します。
+        - paragraph [ref=e71]: ユーザーは、当サービスのコンテンツを個人的かつ非商業的な目的でのみ使用することができます。事前の書面による許可なく、コンテンツを複製、改変、配布、または商業目的で使用することは禁止されています。
+        - paragraph [ref=e72]: TikTokを通じて取得したコンテンツについては、TikTokおよび各コンテンツの権利者の知的財産権を尊重し、適切な権利処理を行います。
+      - generic [ref=e73]:
+        - heading "7. 免責事項" [level=2] [ref=e74]
+        - paragraph [ref=e75]: 当サービスは「現状有姿」で提供されます。当サービスは、以下の事項について一切の保証を行いません：
+        - list [ref=e76]:
+          - listitem [ref=e77]: サービスの中断がないこと、またはエラーがないこと
+          - listitem [ref=e78]: サービスが特定の目的に適合すること
+          - listitem [ref=e79]: サービスに含まれる情報の正確性、完全性、または有用性
+          - listitem [ref=e80]: TikTok APIの可用性または継続性
+        - paragraph [ref=e81]: 当サービスは、ユーザーが当サービスを利用したこと、または利用できなかったことに起因するいかなる損害についても、法律で許容される最大限の範囲で責任を負いません。
+      - generic [ref=e82]:
+        - heading "8. サービスの変更・中断・終了" [level=2] [ref=e83]
+        - paragraph [ref=e84]: 当サービスは、以下の場合に、ユーザーへの事前の通知なくサービスの全部または一部を変更、中断、または終了することがあります：
+        - list [ref=e85]:
+          - listitem [ref=e86]: システムの保守・点検を行う場合
+          - listitem [ref=e87]: 火災、停電、天災等の不可抗力により、サービスの提供が困難となった場合
+          - listitem [ref=e88]: TikTok APIの提供が中断または終了した場合
+          - listitem [ref=e89]: その他、当サービスがサービスの提供が困難と判断した場合
+        - paragraph [ref=e90]: 当サービスは、サービスの変更、中断、または終了によりユーザーに生じた損害について、一切の責任を負いません。
+      - generic [ref=e91]:
+        - heading "9. 損害賠償" [level=2] [ref=e92]
+        - paragraph [ref=e93]: ユーザーが本規約に違反し、当サービスまたは第三者に損害を与えた場合、ユーザーはその損害を賠償する責任を負います。
+      - generic [ref=e94]:
+        - heading "10. 利用規約の変更" [level=2] [ref=e95]
+        - paragraph [ref=e96]: 当サービスは、必要と判断した場合には、ユーザーに通知することなく本規約を変更することがあります。変更後の利用規約は、本ページに掲載した時点から効力を生じるものとします。重要な変更がある場合は、サービス上での通知またはその他適切な方法でお知らせするよう努めます。
+      - generic [ref=e97]:
+        - heading "11. 準拠法および管轄裁判所" [level=2] [ref=e98]
+        - paragraph [ref=e99]: 本規約の解釈および適用は、日本法に準拠するものとします。
+        - paragraph [ref=e100]: 本規約に関して紛争が生じた場合、東京地方裁判所を第一審の専属的合意管轄裁判所とします。
+      - generic [ref=e101]:
+        - heading "12. 分離可能性" [level=2] [ref=e102]
+        - paragraph [ref=e103]: 本規約のいずれかの条項が無効または執行不能と判断された場合でも、その他の条項は引き続き有効に存続するものとします。
+      - generic [ref=e104]:
+        - heading "13. お問い合わせ" [level=2] [ref=e105]
+        - paragraph [ref=e106]: 本規約に関するご質問やご意見がある場合は、以下の連絡先までお問い合わせください：
+        - generic [ref=e107]:
+          - paragraph [ref=e108]:
+            - strong [ref=e109]: サービス名：
+            - text: shogoworks
+          - paragraph [ref=e110]:
+            - strong [ref=e111]: 運営者：
+            - text: 田中省伍
+          - paragraph [ref=e112]:
+            - strong [ref=e113]: お問い合わせ：
+            - link "トップページのお問い合わせフォーム" [ref=e114] [cursor=pointer]:
+              - /url: /
+            - text: よりご連絡ください
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - link "利用規約" [ref=e117] [cursor=pointer]:
+          - /url: /terms-of-service/
+        - link "プライバシーポリシー" [ref=e118] [cursor=pointer]:
+          - /url: /privacy/
+      - paragraph [ref=e119]: © 2026 shogoworks. All rights reserved.
+```

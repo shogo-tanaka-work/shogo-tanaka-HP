@@ -1,0 +1,48 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - paragraph [ref=e5]: CONTACT
+    - heading "お問い合わせ" [level=1] [ref=e6]
+    - paragraph [ref=e7]: お気軽にお問い合わせください。初回のご相談は無料です。
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - heading "お仕事のご相談" [level=2] [ref=e11]
+        - paragraph [ref=e12]: Web開発・AI導入支援・セミナーなど、 まずはお気軽にお問い合わせください。
+      - generic [ref=e14]:
+        - img [ref=e16]
+        - generic [ref=e19]: お問い合わせフォームからどうぞ
+      - generic [ref=e20]:
+        - paragraph [ref=e21]: SNS
+        - generic [ref=e22]:
+          - link "X" [ref=e23] [cursor=pointer]:
+            - /url: https://x.com/shogo_works
+            - img [ref=e24]
+          - link "Instagram" [ref=e26] [cursor=pointer]:
+            - /url: https://www.instagram.com/shogoworks/?next=%2F
+            - img [ref=e27]
+          - link "LinkedIn" [ref=e30] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/shogoworks/
+            - img [ref=e31]
+          - link "GitHub" [ref=e35] [cursor=pointer]:
+            - /url: https://github.com/shogo-tanaka-work
+            - img [ref=e36]
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]: お名前
+        - textbox "お名前" [ref=e44]:
+          - /placeholder: 田中 太郎
+      - generic [ref=e45]:
+        - generic [ref=e46]: メールアドレス
+        - textbox "メールアドレス" [ref=e47]:
+          - /placeholder: your@email.com
+      - generic [ref=e48]:
+        - generic [ref=e49]: お問い合わせ内容
+        - textbox "お問い合わせ内容" [ref=e50]:
+          - /placeholder: ご相談内容をお書きください
+      - button "送信する" [ref=e51] [cursor=pointer]:
+        - text: 送信する
+        - img
+```

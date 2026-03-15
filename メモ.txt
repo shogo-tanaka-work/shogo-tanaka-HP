@@ -1,0 +1,39 @@
+了解です。方式B（GitHub Issue 取得＋Web検索併用）の運用手順をまとめます。ここで
+は実作業は行わず、セットアップとフローのみご案内します。
+
+設定手順
+- トークン作成: GitHubでPATを発行。最小権限は「Issues: Read」。PR作成やPushまで
+行う段階で「repo」権限に拡張します。
+- 環境変数設定: 現在のシェルで設定してください。
+  - `export GITHUB_TOKEN=ghp_xxx`
+  - `export GITHUB_REPO=shogo-tanaka-work/shogo-tanaka-HP`
+- 動作確認（読み取り）:
+  - `curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd
+.github+json" https://api.github.com/repos/$GITHUB_REPO/issues?state=open&per_pa
+ge=5`
+
+実行フロー
+- 取得依頼: 「Issue #123 を取得して要約・実施プランを出して」で開始。
+- 取得処理: 私からネットワーク実行の承認をリクエスト → 承認後にAPIでIssue本文・
+コメントを取得し要件を要約。
+- 計画提示: 変更範囲・手順・受け入れ条件を短く提示（必要なら代替案も）。
+- 実装合意後: ブランチ命名、実装、差分提示。Push/PR作成時は再度ネットワーク承認
+をリクエストします。
+
+トリガー例
+- 「openなバグIssueを一覧→重要度順に要約して」
+- 「Issue #45 を読み取り、影響範囲と見積を提示」
+- 「ラベル `feature` のIssueから優先上位3件の実施計画を」
+
+Web検索の扱い
+- 仕様やエラー調査が必要な場合、「関連ドキュメントを検索」する旨を事前に伝え、ネ
+ットワーク承認後に最小限の範囲で確認し、根拠URLを提示します。
+
+注意点
+- 機密は `.env.local` 等に保存し、コミットしない。
+- この環境はネットワークが都度承認制のため、Issue取得・PR作成・Push時に逐次承認
+依頼が入ります。
+- 必要に応じて `gh` CLI も利用可能ですが、既定は `curl` + GitHub APIで対応します
+。
+
+準備ができたら、試しに「最新のopen Issueを3件取得して要約して」で始めましょう

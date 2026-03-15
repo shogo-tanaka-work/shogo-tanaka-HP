@@ -1,19 +1,16 @@
 "use client"
 
-import { Card } from "@/components/ui/card"
 import { webApps } from "@/data"
+import { ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export function PortfolioSection() {
-  // URLが有効かどうかを判定する関数
   const isValidUrl = (url: string): boolean => {
-    if (!url || url.trim() === "" || url === "#") {
-      return false
-    }
+    if (!url || url.trim() === "" || url === "#") return false
     return true
   }
 
-  // カードクリック時の処理
   const handleCardClick = (url: string) => {
     if (isValidUrl(url)) {
       window.open(url, "_blank", "noopener,noreferrer")
@@ -21,66 +18,71 @@ export function PortfolioSection() {
   }
 
   return (
-    <div className="mb-8">
-      <h2 className="text-lg font-bold text-white mb-4 text-center">制作実績</h2>
-      <div className="space-y-4">
-        {webApps.map((app, index) => {
-          const isClickable = isValidUrl(app.url)
-          
-          return (
-            <Card
-              key={index}
-              className={`border transition-all duration-300 hover:shadow-lg backdrop-blur-sm overflow-hidden ${
-                isClickable ? "cursor-pointer" : "cursor-default"
-              }`}
-              style={{
-                backgroundColor: "rgba(51, 51, 51, 0.6)",
-                borderColor: "rgba(212, 175, 55, 0.2)",
-                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
-              }}
-              onClick={() => handleCardClick(app.url)}
-              onMouseEnter={(e) => {
-                if (isClickable) {
-                  e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.4)"
-                  e.currentTarget.style.boxShadow = "0 8px 25px rgba(212, 175, 55, 0.1)"
-                }
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(212, 175, 55, 0.2)"
-                e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)"
-              }}
-            >
-              <div className="relative w-full h-32">
-                <Image
-                  src={app.image || "/assets/images/placeholders/placeholder.svg?height=128&width=400&query=web application screenshot"}
-                  alt={app.title}
-                  fill
-                  className="object-cover rounded-t-lg"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-white text-sm mb-2">{app.title}</h3>
-                <p className="text-gray-400 text-xs mb-3 leading-relaxed">{app.description}</p>
-                <div className="flex flex-wrap gap-1">
-                  {app.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-2 py-1 text-xs rounded-full border font-medium"
-                      style={{
-                        backgroundColor: "rgba(212, 175, 55, 0.1)",
-                        color: "#D4AF37",
-                        borderColor: "rgba(212, 175, 55, 0.2)",
-                      }}
-                    >
-                      {tech}
-                    </span>
-                  ))}
+    <section id="portfolio" className="py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold text-foreground mb-3">Portfolio</h2>
+          <p className="text-muted-foreground">制作したWebアプリケーション・プロジェクト</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {webApps.map((app, index) => {
+            const isClickable = isValidUrl(app.url)
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`glass rounded-2xl overflow-hidden group transition-all duration-300 hover:border-teal-500/20 ${
+                  isClickable ? "cursor-pointer" : "cursor-default"
+                }`}
+                onClick={() => handleCardClick(app.url)}
+              >
+                {/* Image */}
+                <div className="relative w-full h-48 overflow-hidden">
+                  <Image
+                    src={app.image || "/assets/images/placeholders/placeholder.svg?height=192&width=400"}
+                    alt={app.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {isClickable && (
+                    <div className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-black/50 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ExternalLink className="w-4 h-4 text-white" />
+                    </div>
+                  )}
                 </div>
-              </div>
-            </Card>
-          )
-        })}
+
+                {/* Content */}
+                <div className="p-5">
+                  <h3 className="font-semibold text-foreground mb-2">{app.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                    {app.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {app.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 text-xs rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20 font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            )
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
