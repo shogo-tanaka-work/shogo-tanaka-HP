@@ -69,9 +69,21 @@ export function FooterSection() {
           {/* Social */}
           <div>
             <p className="text-sm font-medium text-foreground mb-3">SNS</p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               {socialLinks.map((link) => {
                 const IconComponent = link.icon
+                if (link.comingSoon) {
+                  return (
+                    <div
+                      key={link.name}
+                      className="w-9 h-9 rounded-lg bg-gray-100 flex items-center justify-center text-muted-foreground/40 cursor-default relative group"
+                      aria-label={`${link.name} (Coming Soon)`}
+                    >
+                      <IconComponent className="w-4 h-4" />
+                      <span className="absolute -bottom-5 text-[8px] text-muted-foreground/50 whitespace-nowrap">Soon</span>
+                    </div>
+                  )
+                }
                 return (
                   <a
                     key={link.name}

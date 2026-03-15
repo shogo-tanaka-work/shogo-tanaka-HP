@@ -1,7 +1,8 @@
 export interface SocialLink {
   name: string
   url: string
-  icon: any
+  icon: React.ComponentType<{ className?: string }>
+  comingSoon?: boolean
 }
 
 export interface WebApp {
@@ -52,7 +53,7 @@ export interface StatItem {
 export interface ServiceItem {
   title: string
   description: string
-  icon: any
+  icon: React.ComponentType<{ className?: string }>
 }
 
 export interface NavItem {

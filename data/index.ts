@@ -1,5 +1,7 @@
 import type { NavItem, Seminar, ServiceItem, SkillsByCategory, SocialLink, StatItem, TeachingExperience, WebApp } from "@/types"
-import { Bot, Code, Github, GraduationCap, Instagram, Linkedin, Twitter } from "lucide-react"
+import { NoteIcon } from "@/components/icons/note-icon"
+import { TiktokIcon } from "@/components/icons/tiktok-icon"
+import { Bot, Code, Github, GraduationCap, Instagram, Linkedin, Twitter, Youtube } from "lucide-react"
 
 export const socialLinks: SocialLink[] = [
   {
@@ -21,6 +23,24 @@ export const socialLinks: SocialLink[] = [
     name: "GitHub",
     url: "https://github.com/shogo-tanaka-work",
     icon: Github,
+  },
+  {
+    name: "Note",
+    url: "#",
+    icon: NoteIcon,
+    comingSoon: true,
+  },
+  {
+    name: "YouTube",
+    url: "#",
+    icon: Youtube,
+    comingSoon: true,
+  },
+  {
+    name: "TikTok",
+    url: "#",
+    icon: TiktokIcon,
+    comingSoon: true,
   },
 ]
 
@@ -62,7 +82,9 @@ export const teachingExperience: TeachingExperience[] = [
   },
 ]
 
-export const upcomingSeminars: Seminar[] = [
+export const upcomingSeminars: Seminar[] = []
+
+export const pastSeminars: Seminar[] = [
   {
     title: "ChatGPT5解説、活用方法紹介",
     date: "2025年10月末日",
@@ -70,7 +92,7 @@ export const upcomingSeminars: Seminar[] = [
     venue: "オンライン",
     capacity: "100名",
     price: "無料",
-    status: "募集中",
+    status: "終了",
   },
 ]
 

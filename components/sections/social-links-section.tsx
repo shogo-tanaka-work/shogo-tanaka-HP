@@ -7,9 +7,24 @@ export function SocialLinksSection() {
   return (
     <div className="mb-8">
       <h2 className="text-lg font-bold text-white mb-4 text-center">SNS</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-[180px] sm:max-w-[200px] md:max-w-[420px] mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-[280px] sm:max-w-[320px] md:max-w-[600px] mx-auto">
         {socialLinks.map((link, index) => {
           const IconComponent = link.icon
+          if (link.comingSoon) {
+            return (
+              <div
+                key={index}
+                className="w-full aspect-square p-0 rounded-xl flex flex-col items-center justify-center opacity-40 cursor-default"
+                style={{
+                  background: "linear-gradient(135deg, #9CA3AF 0%, #D1D5DB 100%)",
+                  color: "#2b2b2b",
+                }}
+              >
+                <IconComponent className="w-6 h-6" />
+                <span className="text-[9px] font-medium mt-1">Coming Soon</span>
+              </div>
+            )
+          }
           return (
             <Button
               key={index}

@@ -20,6 +20,18 @@ export function SeminarsSection() {
           <p className="text-muted-foreground">開催予定のセミナー</p>
         </motion.div>
 
+        {upcomingSeminars.length === 0 ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center py-12"
+          >
+            <p className="text-muted-foreground">現在、開催予定のセミナーはありません。</p>
+            <p className="text-sm text-muted-foreground mt-2">新しいセミナーが決まり次第、こちらでお知らせします。</p>
+          </motion.div>
+        ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {upcomingSeminars.map((seminar, index) => (
             <motion.div
@@ -80,6 +92,7 @@ export function SeminarsSection() {
             </motion.div>
           ))}
         </div>
+        )}
       </div>
     </section>
   )

@@ -9,13 +9,34 @@ export const metadata: Metadata = {
   title: 'shogoworks | Web開発 × AI エンジニア',
   description: '田中省伍（shogoworks）- Webアプリケーション開発とAI技術指導・AI導入支援を専門とするフリーランスエンジニア。企業・個人向けにAI活用セミナーやレッスンも開催中。',
   generator: 'shogoworks',
+  metadataBase: new URL('https://shogoworks.com'),
   icons: {
-    icon: '/assets/images/favicon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     title: 'shogoworks | Web開発 × AI エンジニア',
     description: 'Webアプリケーション開発とAI技術指導・AI導入支援を専門とするフリーランスエンジニア',
     type: 'website',
+    url: 'https://shogoworks.com',
+    siteName: 'shogoworks',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'shogoworks - Web開発 × AI エンジニア',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@shogo_works',
+    creator: '@shogo_works',
+    images: ['/og-image.png'],
   },
 }
 
