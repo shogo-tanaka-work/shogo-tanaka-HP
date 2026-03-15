@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export function FooterSection() {
   return (
-    <footer className="border-t border-white/5 py-12">
+    <footer className="border-t border-gray-200 py-12">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
             <p className="text-lg font-bold text-foreground mb-2">shogoworks</p>
@@ -16,7 +16,38 @@ export function FooterSection() {
             </p>
           </div>
 
-          {/* Links */}
+          {/* Site Links */}
+          <div>
+            <p className="text-sm font-medium text-foreground mb-3">Site</p>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/about"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                href="/portfolio"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Portfolio
+              </Link>
+              <Link
+                href="/skills"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Skills
+              </Link>
+              <Link
+                href="/contact"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          {/* Legal */}
           <div>
             <p className="text-sm font-medium text-foreground mb-3">Legal</p>
             <div className="flex flex-col gap-2">
@@ -47,7 +78,7 @@ export function FooterSection() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+                    className="w-9 h-9 rounded-lg bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
                     aria-label={link.name}
                   >
                     <IconComponent className="w-4 h-4" />
@@ -58,7 +89,7 @@ export function FooterSection() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/5 text-center">
+        <div className="mt-8 pt-8 border-t border-gray-200 text-center">
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} shogoworks. All rights reserved.
           </p>

@@ -1,22 +1,17 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronDown } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
-  const handleScroll = (href: string) => {
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
-      {/* Background pattern */}
-      <div className="absolute inset-0 dot-grid opacity-40" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl" />
+      {/* Background decorations */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-gradient-to-br from-yellow-200/30 via-pink-200/20 to-purple-200/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-purple-200/20 via-teal-200/20 to-blue-200/30 rounded-full blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -27,7 +22,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex-shrink-0"
           >
-            <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden glow">
+            <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-950/5">
               <div className="absolute inset-0 rounded-2xl gradient-border z-10" />
               <Image
                 src="/assets/images/0038f.jpg"
@@ -47,7 +42,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <p className="text-sm font-medium text-indigo-400 mb-3 tracking-wide uppercase">
+              <p className="text-sm font-medium text-teal-600 mb-3 tracking-wide uppercase font-mono">
                 System Engineer & AI Instructor
               </p>
             </motion.div>
@@ -91,38 +86,25 @@ export function HeroSection() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white border-0 shadow-lg shadow-indigo-500/25 px-8"
-                onClick={() => handleScroll("#contact")}
+                className="bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white border-0 shadow-lg shadow-teal-500/25 px-8"
+                asChild
               >
-                お問い合わせ
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/contact">
+                  お問い合わせ
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/10 hover:bg-white/5 text-foreground px-8"
-                onClick={() => handleScroll("#portfolio")}
+                className="border-gray-200 hover:bg-gray-50 text-foreground px-8"
+                asChild
               >
-                実績を見る
+                <Link href="/portfolio">実績を見る</Link>
               </Button>
             </motion.div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <button
-            onClick={() => handleScroll("#stats")}
-            className="text-muted-foreground hover:text-foreground transition-colors animate-bounce"
-          >
-            <ChevronDown className="h-6 w-6" />
-          </button>
-        </motion.div>
       </div>
     </section>
   )

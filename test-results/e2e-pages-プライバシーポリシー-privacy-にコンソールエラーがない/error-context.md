@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "shogoworks" [ref=e5] [cursor=pointer]:
+      - /url: /
+  - generic [ref=e6]:
+    - link "トップページに戻る" [ref=e7] [cursor=pointer]:
+      - /url: /
+      - img [ref=e8]
+      - generic [ref=e10]: トップページに戻る
+    - heading "プライバシーポリシー" [level=1] [ref=e11]
+    - paragraph [ref=e12]: "最終更新日: 2025年2月4日"
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - heading "1. はじめに" [level=2] [ref=e16]
+        - paragraph [ref=e17]: shogoworks（以下「当サービス」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーは、当サービスがどのような情報を収集し、どのように使用、保護するかについて説明します。
+        - paragraph [ref=e18]: 当サービスをご利用いただくことで、本プライバシーポリシーに同意したものとみなされます。
+      - generic [ref=e19]:
+        - heading "2. 収集する情報" [level=2] [ref=e20]
+        - paragraph [ref=e21]: 当サービスは、以下の種類の情報を収集する場合があります：
+        - heading "2.1 ユーザーが提供する情報" [level=3] [ref=e22]
+        - list [ref=e23]:
+          - listitem [ref=e24]: お名前、メールアドレス（お問い合わせフォーム経由）
+          - listitem [ref=e25]: TikTokアカウント情報（TikTok APIを通じて認証した場合）
+          - listitem [ref=e26]: その他、ユーザーが任意で提供する情報
+        - heading "2.2 TikTok APIを通じて取得する情報" [level=3] [ref=e27]
+        - paragraph [ref=e28]: 当サービスがTikTok APIを利用する場合、ユーザーの明示的な同意のもと、以下の情報にアクセスする場合があります：
+        - list [ref=e29]:
+          - listitem [ref=e30]: TikTokユーザープロフィール情報（ユーザー名、表示名、プロフィール画像）
+          - listitem [ref=e31]: 公開されている動画コンテンツに関する情報
+          - listitem [ref=e32]: ユーザーが許可した範囲のアカウントデータ
+        - heading "2.3 自動的に収集される情報" [level=3] [ref=e33]
+        - list [ref=e34]:
+          - listitem [ref=e35]: IPアドレス、ブラウザの種類、アクセス日時
+          - listitem [ref=e36]: デバイス情報（OS、画面解像度等）
+          - listitem [ref=e37]: ウェブサイトの利用状況（アクセスしたページ、滞在時間等）
+      - generic [ref=e38]:
+        - heading "3. 情報の利用目的" [level=2] [ref=e39]
+        - paragraph [ref=e40]: 収集した情報は、以下の目的で使用します：
+        - list [ref=e41]:
+          - listitem [ref=e42]: サービスの提供、運営、改善
+          - listitem [ref=e43]: ユーザーからのお問い合わせへの対応
+          - listitem [ref=e44]: TikTok APIを活用した機能の提供
+          - listitem [ref=e45]: サービスの利用状況の分析
+          - listitem [ref=e46]: セキュリティの確保および不正利用の防止
+          - listitem [ref=e47]: 法的義務の遵守
+      - generic [ref=e48]:
+        - heading "4. 情報の共有と開示" [level=2] [ref=e49]
+        - paragraph [ref=e50]: 当サービスは、以下の場合を除き、ユーザーの個人情報を第三者に開示・共有することはありません：
+        - list [ref=e51]:
+          - listitem [ref=e52]: ユーザーの明示的な同意がある場合
+          - listitem [ref=e53]: 法令に基づく開示請求があった場合
+          - listitem [ref=e54]: ユーザーまたは公共の安全を守るために必要な場合
+          - listitem [ref=e55]: 当サービスの権利や財産を保護するために必要な場合
+          - listitem [ref=e56]: 事業譲渡、合併等に伴い情報が移転する場合（事前に通知します）
+      - generic [ref=e57]:
+        - heading "5. TikTok APIの利用について" [level=2] [ref=e58]
+        - paragraph [ref=e59]: 当サービスは、TikTok for Developers APIを利用しています。TikTok APIを通じて取得した情報については、以下の点を遵守します：
+        - list [ref=e60]:
+          - listitem [ref=e61]: TikTokの開発者利用規約およびデータ共有契約を遵守します
+          - listitem [ref=e62]: 取得したデータは、ユーザーが同意した目的にのみ使用します
+          - listitem [ref=e63]: TikTokから取得したデータを、ユーザーの同意なく第三者に販売、共有、または転送しません
+          - listitem [ref=e64]: ユーザーはいつでもTikTokアカウントとの連携を解除できます
+          - listitem [ref=e65]: 連携解除時には、TikTok APIを通じて取得したデータを削除します
+        - paragraph [ref=e66]:
+          - text: TikTokのプライバシーポリシーについては、
+          - link "TikTokプライバシーポリシー" [ref=e67] [cursor=pointer]:
+            - /url: https://www.tiktok.com/legal/privacy-policy
+          - text: をご参照ください。
+      - generic [ref=e68]:
+        - heading "6. データの保管とセキュリティ" [level=2] [ref=e69]
+        - paragraph [ref=e70]: 当サービスは、収集した個人情報を不正アクセス、紛失、破壊、改ざんから保護するため、適切な技術的・組織的セキュリティ対策を講じています：
+        - list [ref=e71]:
+          - listitem [ref=e72]: SSL/TLS暗号化による通信の保護
+          - listitem [ref=e73]: アクセス制限による不正アクセスの防止
+          - listitem [ref=e74]: 定期的なセキュリティ監査
+          - listitem [ref=e75]: データの適切な期間での保持と削除
+      - generic [ref=e76]:
+        - heading "7. Cookieおよびトラッキング技術" [level=2] [ref=e77]
+        - paragraph [ref=e78]: 当サービスは、ウェブサイトの機能向上および利用状況の分析のため、Cookieおよび類似のトラッキング技術を使用する場合があります。
+        - paragraph [ref=e79]: ユーザーはブラウザの設定によりCookieの受け入れを拒否することができますが、その場合、サービスの一部機能が制限される場合があります。
+      - generic [ref=e80]:
+        - heading "8. ユーザーの権利" [level=2] [ref=e81]
+        - paragraph [ref=e82]: ユーザーは、ご自身の個人情報について以下の権利を有します：
+        - list [ref=e83]:
+          - listitem [ref=e84]:
+            - strong [ref=e85]: アクセス権
+            - text: ：当サービスが保有するご自身の個人情報へのアクセスを請求できます
+          - listitem [ref=e86]:
+            - strong [ref=e87]: 訂正権
+            - text: ：不正確な個人情報の訂正を請求できます
+          - listitem [ref=e88]:
+            - strong [ref=e89]: 削除権
+            - text: ：一定の条件下で個人情報の削除を請求できます
+          - listitem [ref=e90]:
+            - strong [ref=e91]: 処理制限権
+            - text: ：個人情報の処理の制限を請求できます
+          - listitem [ref=e92]:
+            - strong [ref=e93]: データポータビリティ権
+            - text: ：個人情報を構造化された形式で受け取ることができます
+          - listitem [ref=e94]:
+            - strong [ref=e95]: 異議申立権
+            - text: ：特定の処理に対して異議を申し立てることができます
+        - paragraph [ref=e96]: これらの権利を行使する場合は、下記のお問い合わせ先までご連絡ください。
+      - generic [ref=e97]:
+        - heading "9. 未成年者のプライバシー" [level=2] [ref=e98]
+        - paragraph [ref=e99]: 当サービスは、13歳未満の児童から意図的に個人情報を収集することはありません。13歳未満の方は、保護者の同意なく当サービスを利用しないでください。万が一、13歳未満の児童から個人情報を収集したことが判明した場合、速やかに当該情報を削除します。
+      - generic [ref=e100]:
+        - heading "10. 国際的なデータ転送" [level=2] [ref=e101]
+        - paragraph [ref=e102]: 当サービスは日本国内で運営されていますが、サービスの提供に伴い、ユーザーの情報が日本国外に転送される場合があります。その場合、適切な保護措置を講じた上で転送を行います。
+      - generic [ref=e103]:
+        - heading "11. プライバシーポリシーの変更" [level=2] [ref=e104]
+        - paragraph [ref=e105]: 当サービスは、必要に応じて本プライバシーポリシーを変更することがあります。重要な変更がある場合は、サービス上での通知またはその他適切な方法でお知らせします。変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じます。
+      - generic [ref=e106]:
+        - heading "12. お問い合わせ" [level=2] [ref=e107]
+        - paragraph [ref=e108]: 本プライバシーポリシーに関するご質問、ご意見、または個人情報に関する請求がある場合は、以下の連絡先までお問い合わせください：
+        - generic [ref=e109]:
+          - paragraph [ref=e110]:
+            - strong [ref=e111]: サービス名：
+            - text: shogoworks
+          - paragraph [ref=e112]:
+            - strong [ref=e113]: 運営者：
+            - text: 田中省伍
+          - paragraph [ref=e114]:
+            - strong [ref=e115]: お問い合わせ：
+            - link "トップページのお問い合わせフォーム" [ref=e116] [cursor=pointer]:
+              - /url: /
+            - text: よりご連絡ください
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - link "利用規約" [ref=e119] [cursor=pointer]:
+          - /url: /terms-of-service/
+        - link "プライバシーポリシー" [ref=e120] [cursor=pointer]:
+          - /url: /privacy/
+      - paragraph [ref=e121]: © 2026 shogoworks. All rights reserved.
+```

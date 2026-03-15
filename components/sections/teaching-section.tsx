@@ -27,7 +27,7 @@ export function TeachingSection() {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/50 via-violet-500/50 to-transparent hidden sm:block" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-teal-500/50 via-emerald-500/50 to-transparent hidden sm:block" />
 
           <div className="space-y-6">
             {teachingExperience.map((experience, index) => {
@@ -46,14 +46,14 @@ export function TeachingSection() {
                   } gap-4 sm:gap-8`}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-4 md:left-1/2 top-6 w-3 h-3 rounded-full bg-indigo-500 -translate-x-1.5 hidden sm:block ring-4 ring-background z-10" />
+                  <div className="absolute left-4 md:left-1/2 top-6 w-3 h-3 rounded-full bg-teal-500 -translate-x-1.5 hidden sm:block ring-4 ring-background z-10" />
 
                   {/* Spacer for timeline alignment */}
                   <div className="hidden sm:block sm:w-1/2" />
 
                   {/* Card */}
                   <div
-                    className={`sm:w-1/2 glass rounded-2xl p-5 transition-all duration-300 hover:border-indigo-500/20 ${
+                    className={`sm:w-1/2 glass rounded-2xl p-5 transition-all duration-300 hover:border-teal-500/20 ${
                       clickable ? "cursor-pointer" : ""
                     }`}
                     onClick={() => {
@@ -66,9 +66,9 @@ export function TeachingSection() {
                           {experience.title}
                           {clickable && <ExternalLink className="w-3.5 h-3.5 text-muted-foreground" />}
                         </h3>
-                        <p className="text-sm text-indigo-400">{experience.organization}</p>
+                        <p className="text-sm text-teal-400">{experience.organization}</p>
                       </div>
-                      <span className="px-2.5 py-1 text-xs rounded-full font-medium bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                      <span className="px-2.5 py-1 text-xs rounded-full font-medium bg-teal-500/10 text-teal-300 border border-teal-500/20">
                         {experience.type}
                       </span>
                     </div>

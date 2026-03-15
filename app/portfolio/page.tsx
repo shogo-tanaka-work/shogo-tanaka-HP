@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-export function PortfolioSection() {
+export default function PortfolioPage() {
   const isValidUrl = (url: string): boolean => {
     if (!url || url.trim() === "" || url === "#") return false
     return true
@@ -18,19 +18,27 @@ export function PortfolioSection() {
   }
 
   return (
-    <section id="portfolio" className="py-20">
+    <div className="pt-24 pb-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        {/* Page Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-foreground mb-3">Portfolio</h2>
-          <p className="text-muted-foreground">制作したWebアプリケーション・プロジェクト</p>
+          <p className="text-sm font-medium text-teal-600 tracking-widest uppercase font-mono mb-3">
+            PORTFOLIO
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+            制作実績
+          </h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            制作したWebアプリケーション・プロジェクト
+          </p>
         </motion.div>
 
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {webApps.map((app, index) => {
             const isClickable = isValidUrl(app.url)
@@ -41,12 +49,11 @@ export function PortfolioSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`glass rounded-2xl overflow-hidden group transition-all duration-300 hover:border-teal-500/20 ${
+                className={`bg-white/80 ring-1 ring-gray-950/5 shadow-sm rounded-2xl overflow-hidden group transition-all duration-300 ${
                   isClickable ? "cursor-pointer" : "cursor-default"
                 }`}
                 onClick={() => handleCardClick(app.url)}
               >
-                {/* Image */}
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
                     src={app.image || "/assets/images/placeholders/placeholder.svg?height=192&width=400"}
@@ -60,8 +67,6 @@ export function PortfolioSection() {
                     </div>
                   )}
                 </div>
-
-                {/* Content */}
                 <div className="p-5">
                   <h3 className="font-semibold text-foreground mb-2">{app.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -71,7 +76,7 @@ export function PortfolioSection() {
                     {app.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 text-xs rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20 font-medium"
+                        className="px-3 py-1 text-xs rounded-full bg-teal-50 text-teal-600 border border-teal-200 font-medium"
                       >
                         {tech}
                       </span>
@@ -83,6 +88,6 @@ export function PortfolioSection() {
           })}
         </div>
       </div>
-    </section>
+    </div>
   )
 }

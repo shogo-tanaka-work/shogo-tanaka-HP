@@ -8,7 +8,7 @@ import { Mail, Send } from "lucide-react"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
-export function ContactSection() {
+export default function ContactPage() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
@@ -49,49 +49,53 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20">
+    <div className="pt-24 pb-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        {/* Page Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-foreground mb-3">Contact</h2>
-          <p className="text-muted-foreground">お気軽にお問い合わせください</p>
+          <p className="text-sm font-medium text-teal-600 tracking-widest uppercase font-mono mb-3">
+            CONTACT
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+            お問い合わせ
+          </h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            お気軽にお問い合わせください。初回のご相談は無料です。
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="md:col-span-2 space-y-6"
           >
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
+              <h2 className="text-lg font-semibold text-foreground mb-2">
                 お仕事のご相談
-              </h3>
+              </h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Web開発・AI導入支援・セミナーなど、
                 まずはお気軽にお問い合わせください。
-                初回のご相談は無料です。
               </p>
             </div>
 
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <div className="w-9 h-9 rounded-lg bg-teal-500/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-4 h-4 text-teal-400" />
+                <div className="w-9 h-9 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 text-teal-600" />
                 </div>
                 <span>お問い合わせフォームからどうぞ</span>
               </div>
             </div>
 
-            {/* SNS Links */}
             <div>
               <p className="text-sm font-medium text-foreground mb-3">SNS</p>
               <div className="flex gap-3">
@@ -103,7 +107,7 @@ export function ContactSection() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-lg bg-white/5 hover:bg-teal-500/10 flex items-center justify-center text-muted-foreground hover:text-teal-400 transition-colors"
+                      className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-teal-50 flex items-center justify-center text-muted-foreground hover:text-teal-600 transition-colors"
                       aria-label={link.name}
                     >
                       <IconComponent className="w-4 h-4" />
@@ -117,12 +121,11 @@ export function ContactSection() {
           {/* Right: Form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-3"
           >
-            <div className="glass rounded-2xl p-6">
+            <div className="bg-white/80 ring-1 ring-gray-950/5 shadow-sm rounded-2xl p-6">
               <form onSubmit={submit} className="space-y-4">
                 <div>
                   <label htmlFor="contact-name" className="text-sm font-medium text-foreground mb-1.5 block">
@@ -134,7 +137,7 @@ export function ContactSection() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    className="bg-white/5 border-white/10 focus:border-teal-500/50 focus:ring-teal-500/20 placeholder:text-muted-foreground/50"
+                    className="bg-gray-50 border-gray-200 focus:border-teal-500 focus:ring-teal-500/20 placeholder:text-muted-foreground/50"
                   />
                 </div>
                 <div>
@@ -148,7 +151,7 @@ export function ContactSection() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="bg-white/5 border-white/10 focus:border-teal-500/50 focus:ring-teal-500/20 placeholder:text-muted-foreground/50"
+                    className="bg-gray-50 border-gray-200 focus:border-teal-500 focus:ring-teal-500/20 placeholder:text-muted-foreground/50"
                   />
                 </div>
                 <div>
@@ -162,7 +165,7 @@ export function ContactSection() {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                     rows={5}
-                    className="bg-white/5 border-white/10 focus:border-teal-500/50 focus:ring-teal-500/20 placeholder:text-muted-foreground/50 resize-none"
+                    className="bg-gray-50 border-gray-200 focus:border-teal-500 focus:ring-teal-500/20 placeholder:text-muted-foreground/50 resize-none"
                   />
                 </div>
                 <Button
@@ -180,18 +183,18 @@ export function ContactSection() {
                   )}
                 </Button>
                 {status === "ok" && (
-                  <p className="text-sm text-emerald-400 text-center">
+                  <p className="text-sm text-emerald-600 text-center">
                     送信しました。ご連絡ありがとうございます。
                   </p>
                 )}
                 {status === "error" && (
-                  <p className="text-sm text-red-400 text-center">{error}</p>
+                  <p className="text-sm text-red-500 text-center">{error}</p>
                 )}
               </form>
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

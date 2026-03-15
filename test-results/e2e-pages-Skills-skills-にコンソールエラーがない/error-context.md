@@ -1,0 +1,53 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - paragraph [ref=e5]: TECH STACK
+    - heading "Skills" [level=1] [ref=e6]
+    - paragraph [ref=e7]: 技術スタック・対応可能な領域
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - img [ref=e12]
+        - generic [ref=e16]:
+          - heading "Frontend" [level=3] [ref=e17]
+          - paragraph [ref=e18]: フロントエンド開発
+      - generic [ref=e19]:
+        - generic [ref=e20]: HTML/CSS
+        - generic [ref=e21]: JavaScript
+        - generic [ref=e22]: TypeScript
+        - generic [ref=e23]: React/Next.js
+        - generic [ref=e24]: Sass
+        - generic [ref=e25]: Tailwind CSS
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - img [ref=e29]
+        - generic [ref=e33]:
+          - heading "Backend" [level=3] [ref=e34]
+          - paragraph [ref=e35]: バックエンド開発
+      - generic [ref=e36]:
+        - generic [ref=e37]: Node.js
+        - generic [ref=e38]: Python
+        - generic [ref=e39]: REST API/Graph API
+        - generic [ref=e40]: PostgreSQL
+        - generic [ref=e41]: MySQL
+        - generic [ref=e42]: MongoDB
+        - generic [ref=e43]: Supabase
+        - generic [ref=e44]: Dify
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - img [ref=e48]
+        - generic [ref=e51]:
+          - heading "Infrastructure" [level=3] [ref=e52]
+          - paragraph [ref=e53]: インフラ・クラウド
+      - generic [ref=e54]:
+        - generic [ref=e55]: Git
+        - generic [ref=e56]: GitHub
+        - generic [ref=e57]: GitLab
+        - generic [ref=e58]: Vercel
+        - generic [ref=e59]: Docker
+        - generic [ref=e60]: Azure
+        - generic [ref=e61]: GCP
+        - generic [ref=e62]: AWS
+```

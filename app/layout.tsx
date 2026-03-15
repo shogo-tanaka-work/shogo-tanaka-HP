@@ -1,3 +1,5 @@
+import { FooterSection } from '@/components/sections/footer-section'
+import { Navbar } from '@/components/sections/navbar'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
@@ -23,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja" className="dark scroll-smooth">
+    <html lang="ja" className="scroll-smooth">
       <head>
         <style>{`
 html {
@@ -33,7 +35,13 @@ html {
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="min-h-screen bg-background flex flex-col">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <FooterSection />
+        </div>
+      </body>
     </html>
   )
 }

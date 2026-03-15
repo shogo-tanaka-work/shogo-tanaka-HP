@@ -1,0 +1,132 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - paragraph [ref=e5]: ABOUT
+    - heading "田中 省伍" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Web開発 × AI で、ビジネスの課題を解決するフリーランスエンジニア
+  - generic [ref=e9]:
+    - img "田中 省伍" [ref=e11]
+    - generic [ref=e12]:
+      - heading "System Engineer & AI Instructor" [level=2] [ref=e13]
+      - paragraph [ref=e14]: Webアプリケーション開発とAI技術指導・AI導入支援を専門としています。 Next.js / React を中心としたモダンなWeb開発から、ChatGPT・Dify等を活用したAI導入支援、 企業・個人向けのAI活用セミナーまで幅広く対応しています。
+      - generic [ref=e15]:
+        - link "X" [ref=e16] [cursor=pointer]:
+          - /url: https://x.com/shogo_works
+          - img [ref=e17]
+        - link "Instagram" [ref=e19] [cursor=pointer]:
+          - /url: https://www.instagram.com/shogoworks/?next=%2F
+          - img [ref=e20]
+        - link "LinkedIn" [ref=e23] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/shogoworks/
+          - img [ref=e24]
+        - link "GitHub" [ref=e28] [cursor=pointer]:
+          - /url: https://github.com/shogo-tanaka-work
+          - img [ref=e29]
+  - generic [ref=e32]:
+    - generic [ref=e33]:
+      - img [ref=e35]
+      - generic [ref=e37]:
+        - paragraph [ref=e38]: EXPERTISE
+        - heading "専門性" [level=2] [ref=e39]
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - heading "Web開発" [level=3] [ref=e42]
+        - paragraph [ref=e43]: Next.js / React を中心に、要件定義から設計・実装・運用まで対応。モダンな技術スタックで高品質なWebアプリケーションを構築。
+      - generic [ref=e44]:
+        - heading "AI導入支援" [level=3] [ref=e45]
+        - paragraph [ref=e46]: 企業のAI活用をサポート。ChatGPT / Dify 等を活用した業務効率化や、AIツールの選定・導入コンサルティング。
+      - generic [ref=e47]:
+        - heading "セミナー・研修" [level=3] [ref=e48]
+        - paragraph [ref=e49]: 企業・個人向けにAI活用セミナーや技術研修を開催。実践的なハンズオン形式で、すぐに業務に活かせるスキルを提供。
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - img [ref=e53]
+      - generic [ref=e56]:
+        - paragraph [ref=e57]: EDUCATION
+        - heading "教育活動" [level=2] [ref=e58]
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - heading "AI講師（業務活用）" [level=3] [ref=e62]
+          - generic [ref=e63]: toC
+        - paragraph [ref=e64]: byTech
+        - paragraph [ref=e65]: AI活用の基礎から実践まで幅広く指導
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - img [ref=e68]
+            - text: 2025年5月 - 現在
+          - generic [ref=e71]:
+            - img [ref=e72]
+            - text: 30+名
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - heading "ChatGPT活用セミナー" [level=3] [ref=e79]
+          - generic [ref=e80]: toC
+        - paragraph [ref=e81]: オンライン
+        - paragraph [ref=e82]: ChatGPT導入・活用方法の研修
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - img [ref=e85]
+            - text: 2025年5月 - 現在
+          - generic [ref=e88]:
+            - img [ref=e89]
+            - text: 50+名
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - heading "MCP入門セミナー" [level=3] [ref=e96]
+          - generic [ref=e97]: toC
+        - paragraph [ref=e98]: オンライン
+        - paragraph [ref=e99]: MCPの解説、活用方法紹介
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - img [ref=e102]
+            - text: 2025年6月
+          - generic [ref=e105]:
+            - img [ref=e106]
+            - text: 20+名
+  - generic [ref=e111]:
+    - generic [ref=e112]:
+      - img [ref=e114]
+      - generic [ref=e117]:
+        - paragraph [ref=e118]: CURRENT ACTIVITIES
+        - heading "現在の活動" [level=2] [ref=e119]
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - heading "フリーランスエンジニア" [level=3] [ref=e122]
+        - paragraph [ref=e123]: Webアプリケーション開発・業務システム構築
+      - generic [ref=e124]:
+        - heading "AI導入支援コンサルタント" [level=3] [ref=e125]
+        - paragraph [ref=e126]: ChatGPT・AI活用の企業向け導入コンサルティング
+      - generic [ref=e127]:
+        - heading "AI活用セミナー講師" [level=3] [ref=e128]
+        - paragraph [ref=e129]: 企業・個人向けにAI活用研修を開催
+      - generic [ref=e130]:
+        - heading "技術情報の発信" [level=3] [ref=e131]
+        - paragraph [ref=e132]: AI駆動開発・Web技術に関するコンテンツ発信
+  - generic [ref=e133]:
+    - generic [ref=e134]:
+      - img [ref=e136]
+      - generic [ref=e138]:
+        - paragraph [ref=e139]: UPCOMING SEMINARS
+        - heading "開催予定のセミナー" [level=2] [ref=e140]
+    - generic [ref=e142]:
+      - generic [ref=e144]:
+        - heading "ChatGPT5解説、活用方法紹介" [level=3] [ref=e145]
+        - generic [ref=e146]: 募集中
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - img [ref=e149]
+          - generic [ref=e151]: 2025年10月末日
+        - generic [ref=e152]:
+          - img [ref=e153]
+          - generic [ref=e156]: 20:00 - 21:00
+        - generic [ref=e157]:
+          - img [ref=e158]
+          - generic [ref=e161]: オンライン
+        - generic [ref=e162]:
+          - img [ref=e163]
+          - generic [ref=e168]: 100名
+      - generic [ref=e169]: 無料
+```

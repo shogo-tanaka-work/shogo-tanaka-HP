@@ -1,0 +1,277 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - link "shogoworks" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e7]:
+          - button "サービス" [ref=e8] [cursor=pointer]
+          - button "実績" [ref=e9] [cursor=pointer]
+          - button "スキル" [ref=e10] [cursor=pointer]
+          - button "講師実績" [ref=e11] [cursor=pointer]
+          - button "お問い合わせ" [ref=e12] [cursor=pointer]
+          - button "お問い合わせ" [ref=e13] [cursor=pointer]
+  - main [ref=e14]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - img "田中 省伍" [ref=e23]
+        - generic [ref=e24]:
+          - paragraph [ref=e26]: System Engineer & AI Instructor
+          - heading "田中 省伍" [level=1] [ref=e27]
+          - paragraph [ref=e28]: Web開発 × AI で、 ビジネスの課題を解決する
+          - paragraph [ref=e29]: Webアプリケーション開発とAI技術指導・AI導入支援を専門としています。 企業・個人向けにAI活用セミナーやレッスンも開催中。
+          - generic [ref=e30]:
+            - button "お問い合わせ" [ref=e31] [cursor=pointer]:
+              - text: お問い合わせ
+              - img
+            - button "実績を見る" [ref=e32] [cursor=pointer]
+      - button [ref=e34] [cursor=pointer]:
+        - img [ref=e35]
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: 3+
+        - paragraph [ref=e42]: 年の開発経験
+        - paragraph [ref=e43]: Web開発・システム構築
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: 100+
+        - paragraph [ref=e46]: 名の指導実績
+        - paragraph [ref=e47]: AI活用・プログラミング研修
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: 10+
+        - paragraph [ref=e50]: 回のセミナー開催
+        - paragraph [ref=e51]: ChatGPT・AI活用セミナー
+      - generic [ref=e52]:
+        - paragraph [ref=e53]: 5+
+        - paragraph [ref=e54]: 件のプロジェクト
+        - paragraph [ref=e55]: Webアプリ・業務システム
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - heading "Services" [level=2] [ref=e59]
+        - paragraph [ref=e60]: Webアプリ開発からAI導入支援、セミナー開催まで。 ビジネスの成長をテクノロジーで支援します。
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - img [ref=e64]
+          - heading "Web開発" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Next.js / React を中心に、要件定義から設計・実装・運用まで対応。モダンな技術スタックで高品質なWebアプリケーションを構築します。
+        - generic [ref=e69]:
+          - img [ref=e71]
+          - heading "AI導入支援" [level=3] [ref=e74]
+          - paragraph [ref=e75]: 企業のAI活用をサポート。ChatGPT / Dify 等を活用した業務効率化や、AIツールの選定・導入コンサルティングを行います。
+        - generic [ref=e76]:
+          - img [ref=e78]
+          - heading "セミナー・研修" [level=3] [ref=e81]
+          - paragraph [ref=e82]: 企業・個人向けにAI活用セミナーや技術研修を開催。実践的なハンズオン形式で、すぐに業務に活かせるスキルを提供します。
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - heading "Portfolio" [level=2] [ref=e86]
+        - paragraph [ref=e87]: 制作したWebアプリケーション・プロジェクト
+      - generic [ref=e89] [cursor=pointer]:
+        - generic [ref=e90]:
+          - img "筋トレ記録・分析アプリ" [ref=e91]
+          - img [ref=e93]
+        - generic [ref=e97]:
+          - heading "筋トレ記録・分析アプリ" [level=3] [ref=e98]
+          - paragraph [ref=e99]: 筋トレ記録・分析アプリ
+          - generic [ref=e100]:
+            - generic [ref=e101]: TypeScript
+            - generic [ref=e102]: Material UI
+            - generic [ref=e103]: PostgreSQL
+    - generic [ref=e105]:
+      - generic [ref=e106]:
+        - heading "Skills" [level=2] [ref=e107]
+        - paragraph [ref=e108]: 技術スタック・対応可能な領域
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - img [ref=e113]
+            - heading "Frontend" [level=3] [ref=e117]
+          - generic [ref=e118]:
+            - generic [ref=e119]: HTML/CSS
+            - generic [ref=e120]: JavaScript
+            - generic [ref=e121]: TypeScript
+            - generic [ref=e122]: React/Next.js
+            - generic [ref=e123]: Sass
+            - generic [ref=e124]: Tailwind CSS
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - img [ref=e128]
+            - heading "Backend" [level=3] [ref=e132]
+          - generic [ref=e133]:
+            - generic [ref=e134]: Node.js
+            - generic [ref=e135]: Python
+            - generic [ref=e136]: REST API/Graph API
+            - generic [ref=e137]: PostgreSQL
+            - generic [ref=e138]: MySQL
+            - generic [ref=e139]: MongoDB
+            - generic [ref=e140]: Supabase
+            - generic [ref=e141]: Dify
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - img [ref=e145]
+            - heading "Infrastructure" [level=3] [ref=e148]
+          - generic [ref=e149]:
+            - generic [ref=e150]: Git
+            - generic [ref=e151]: GitHub
+            - generic [ref=e152]: GitLab
+            - generic [ref=e153]: Vercel
+            - generic [ref=e154]: Docker
+            - generic [ref=e155]: Azure
+            - generic [ref=e156]: GCP
+            - generic [ref=e157]: AWS
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - heading "Teaching" [level=2] [ref=e161]
+        - paragraph [ref=e162]: 講師実績・セミナー開催
+      - generic [ref=e165]:
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - generic [ref=e171]:
+              - heading "AI講師（業務活用）" [level=3] [ref=e172]
+              - paragraph [ref=e173]: byTech
+            - generic [ref=e174]: toC
+          - paragraph [ref=e175]: AI活用の基礎から実践まで幅広く指導
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - img [ref=e178]
+              - text: 2025年5月 - 現在
+            - generic [ref=e181]:
+              - img [ref=e182]
+              - text: 30+名指導
+        - generic [ref=e190] [cursor=pointer]:
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - heading "ChatGPT活用セミナー" [level=3] [ref=e193]:
+                - text: ChatGPT活用セミナー
+                - img [ref=e194]
+              - paragraph [ref=e198]: オンライン
+            - generic [ref=e199]: toC
+          - paragraph [ref=e200]: ChatGPT導入・活用方法の研修
+          - generic [ref=e201]:
+            - generic [ref=e202]:
+              - img [ref=e203]
+              - text: 2025年5月 - 現在
+            - generic [ref=e206]:
+              - img [ref=e207]
+              - text: 50+名指導
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - heading "MCP入門セミナー" [level=3] [ref=e218]
+              - paragraph [ref=e219]: オンライン
+            - generic [ref=e220]: toC
+          - paragraph [ref=e221]: MCPの解説、活用方法紹介
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - img [ref=e224]
+              - text: 2025年6月
+            - generic [ref=e227]:
+              - img [ref=e228]
+              - text: 20+名指導
+    - generic [ref=e234]:
+      - generic [ref=e235]:
+        - heading "Seminars" [level=2] [ref=e236]
+        - paragraph [ref=e237]: 開催予定のセミナー
+      - generic [ref=e239]:
+        - generic [ref=e241]:
+          - heading "ChatGPT5解説、活用方法紹介" [level=3] [ref=e242]
+          - generic [ref=e243]: 募集中
+        - generic [ref=e244]:
+          - generic [ref=e245]:
+            - img [ref=e246]
+            - generic [ref=e248]: 2025年10月末日
+          - generic [ref=e249]:
+            - img [ref=e250]
+            - generic [ref=e253]: 20:00 - 21:00
+          - generic [ref=e254]:
+            - img [ref=e255]
+            - generic [ref=e258]: オンライン
+          - generic [ref=e259]:
+            - img [ref=e260]
+            - generic [ref=e265]: 100名
+        - generic [ref=e266]:
+          - generic [ref=e267]: 無料
+          - button "詳細・申込み" [ref=e268] [cursor=pointer]
+    - generic [ref=e276]:
+      - heading "プロジェクトについて ご相談ください" [level=2] [ref=e277]
+      - paragraph [ref=e278]: Web開発・AI導入・セミナーなど、お気軽にお問い合わせください。 初回のご相談は無料です。
+      - button "お問い合わせはこちら" [ref=e279] [cursor=pointer]:
+        - text: お問い合わせはこちら
+        - img
+    - generic [ref=e281]:
+      - generic [ref=e282]:
+        - heading "Contact" [level=2] [ref=e283]
+        - paragraph [ref=e284]: お気軽にお問い合わせください
+      - generic [ref=e285]:
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - heading "お仕事のご相談" [level=3] [ref=e288]
+            - paragraph [ref=e289]: Web開発・AI導入支援・セミナーなど、 まずはお気軽にお問い合わせください。 初回のご相談は無料です。
+          - generic [ref=e291]:
+            - img [ref=e293]
+            - generic [ref=e296]: お問い合わせフォームからどうぞ
+          - generic [ref=e297]:
+            - paragraph [ref=e298]: SNS
+            - generic [ref=e299]:
+              - link "X" [ref=e300] [cursor=pointer]:
+                - /url: https://x.com/shogo_works
+                - img [ref=e301]
+              - link "Instagram" [ref=e303] [cursor=pointer]:
+                - /url: https://www.instagram.com/shogoworks/?next=%2F
+                - img [ref=e304]
+              - link "LinkedIn" [ref=e307] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/shogoworks/
+                - img [ref=e308]
+              - link "GitHub" [ref=e312] [cursor=pointer]:
+                - /url: https://github.com/shogo-tanaka-work
+                - img [ref=e313]
+        - generic [ref=e318]:
+          - generic [ref=e319]:
+            - generic [ref=e320]: お名前
+            - textbox "お名前" [ref=e321]:
+              - /placeholder: 田中 太郎
+          - generic [ref=e322]:
+            - generic [ref=e323]: メールアドレス
+            - textbox "メールアドレス" [ref=e324]:
+              - /placeholder: your@email.com
+          - generic [ref=e325]:
+            - generic [ref=e326]: お問い合わせ内容
+            - textbox "お問い合わせ内容" [ref=e327]:
+              - /placeholder: ご相談内容をお書きください
+          - button "送信する" [ref=e328] [cursor=pointer]:
+            - text: 送信する
+            - img
+  - contentinfo [ref=e329]:
+    - generic [ref=e330]:
+      - generic [ref=e331]:
+        - generic [ref=e332]:
+          - paragraph [ref=e333]: shogoworks
+          - paragraph [ref=e334]:
+            - text: Web開発 × AI で、
+            - text: ビジネスの課題を解決する
+        - generic [ref=e335]:
+          - paragraph [ref=e336]: Legal
+          - generic [ref=e337]:
+            - link "利用規約" [ref=e338] [cursor=pointer]:
+              - /url: /terms-of-service/
+            - link "プライバシーポリシー" [ref=e339] [cursor=pointer]:
+              - /url: /privacy/
+        - generic [ref=e340]:
+          - paragraph [ref=e341]: SNS
+          - generic [ref=e342]:
+            - link "X" [ref=e343] [cursor=pointer]:
+              - /url: https://x.com/shogo_works
+              - img [ref=e344]
+            - link "Instagram" [ref=e346] [cursor=pointer]:
+              - /url: https://www.instagram.com/shogoworks/?next=%2F
+              - img [ref=e347]
+            - link "LinkedIn" [ref=e350] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/shogoworks/
+              - img [ref=e351]
+            - link "GitHub" [ref=e355] [cursor=pointer]:
+              - /url: https://github.com/shogo-tanaka-work
+              - img [ref=e356]
+      - paragraph [ref=e360]: © 2026 shogoworks. All rights reserved.
+```

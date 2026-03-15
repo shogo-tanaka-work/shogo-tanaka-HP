@@ -28,10 +28,10 @@ export function SeminarsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative glass rounded-2xl p-6 hover:border-indigo-500/20 transition-colors overflow-hidden"
+              className="relative glass rounded-2xl p-6 hover:border-teal-500/20 transition-colors overflow-hidden"
             >
               {/* Decorative gradient */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-indigo-500/10 to-transparent rounded-bl-full" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-teal-500/10 to-transparent rounded-bl-full" />
 
               {/* Status badge */}
               <div className="flex items-start justify-between mb-4 relative z-10">
@@ -50,19 +50,19 @@ export function SeminarsSection() {
               {/* Details */}
               <div className="space-y-2 mb-5 relative z-10">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Calendar className="w-4 h-4 text-indigo-400" />
+                  <Calendar className="w-4 h-4 text-teal-400" />
                   <span>{seminar.date}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Clock className="w-4 h-4 text-indigo-400" />
+                  <Clock className="w-4 h-4 text-teal-400" />
                   <span>{seminar.time}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <MapPin className="w-4 h-4 text-indigo-400" />
+                  <MapPin className="w-4 h-4 text-teal-400" />
                   <span>{seminar.venue}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Users className="w-4 h-4 text-indigo-400" />
+                  <Users className="w-4 h-4 text-teal-400" />
                   <span>{seminar.capacity}</span>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export function SeminarsSection() {
                 <span className="text-lg font-bold gradient-text">{seminar.price}</span>
                 <Button
                   size="sm"
-                  className="bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white border-0 shadow-lg shadow-indigo-500/25"
+                  className="bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white border-0 shadow-lg shadow-teal-500/25"
                 >
                   詳細・申込み
                 </Button>

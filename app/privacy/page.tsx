@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
         </ul>
         <p className="mt-3">
           TikTokのプライバシーポリシーについては、
-          <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 underline">
+          <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:text-teal-300 underline">
             TikTokプライバシーポリシー
           </a>
           をご参照ください。
@@ -163,7 +163,7 @@ export default function PrivacyPolicyPage() {
           <p className="mb-1"><strong className="text-foreground">サービス名：</strong>shogoworks</p>
           <p className="mb-1"><strong className="text-foreground">運営者：</strong>田中省伍</p>
           <p><strong className="text-foreground">お問い合わせ：</strong>
-            <a href="/" className="text-indigo-400 hover:text-indigo-300 underline">
+            <a href="/" className="text-teal-400 hover:text-teal-300 underline">
               トップページのお問い合わせフォーム
             </a>
             よりご連絡ください

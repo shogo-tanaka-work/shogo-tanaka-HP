@@ -131,9 +131,8 @@ export const services: ServiceItem[] = [
 ]
 
 export const navItems: NavItem[] = [
-  { label: "サービス", href: "#services" },
-  { label: "実績", href: "#portfolio" },
-  { label: "スキル", href: "#skills" },
-  { label: "講師実績", href: "#teaching" },
-  { label: "お問い合わせ", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Skills", href: "/skills" },
+  { label: "Contact", href: "/contact" },
 ]

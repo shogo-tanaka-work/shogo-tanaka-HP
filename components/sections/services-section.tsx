@@ -31,10 +31,10 @@ export function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass rounded-2xl p-6 hover:border-indigo-500/20 transition-all duration-300 group"
+                className="bg-white/80 ring-1 ring-gray-950/5 shadow-sm rounded-3xl p-6 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-violet-500/20 flex items-center justify-center mb-5 group-hover:from-indigo-500/30 group-hover:to-violet-500/30 transition-colors">
-                  <IconComponent className="w-6 h-6 text-indigo-400" />
+                <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-5 group-hover:bg-teal-100 transition-colors">
+                  <IconComponent className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-3">
                   {service.title}

@@ -15,7 +15,7 @@ export function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass rounded-2xl p-6 text-center hover:border-indigo-500/20 transition-colors group"
+              className="bg-white/80 ring-1 ring-gray-950/5 shadow-sm rounded-3xl p-6 text-center transition-colors group"
             >
               <p className="text-3xl sm:text-4xl font-bold gradient-text mb-1">
                 {stat.value}

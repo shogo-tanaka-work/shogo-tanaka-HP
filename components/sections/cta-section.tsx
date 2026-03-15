@@ -2,14 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 export function CTASection() {
-  const handleScroll = () => {
-    const el = document.querySelector("#contact")
-    if (el) el.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -21,10 +17,9 @@ export function CTASection() {
           className="relative overflow-hidden rounded-3xl p-8 sm:p-12 text-center"
         >
           {/* Gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-violet-500/10 to-indigo-500/5" />
-          <div className="absolute inset-0 glass" />
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 via-pink-50 to-purple-50" />
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-br from-yellow-200/40 via-pink-200/30 to-transparent rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-br from-purple-200/30 via-teal-200/20 to-transparent rounded-full blur-3xl" />
 
           <div className="relative z-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
@@ -38,11 +33,13 @@ export function CTASection() {
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white border-0 shadow-lg shadow-indigo-500/25 px-8"
-              onClick={handleScroll}
+              className="bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white border-0 shadow-lg shadow-teal-500/25 px-8"
+              asChild
             >
-              お問い合わせはこちら
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <Link href="/contact">
+                お問い合わせはこちら
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </motion.div>

@@ -9,15 +9,15 @@ const categoryConfig = [
     key: "frontend" as const,
     title: "Frontend",
     icon: Code2,
-    gradient: "from-indigo-500/20 to-blue-500/20",
-    badgeColor: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
+    gradient: "from-teal-500/20 to-blue-500/20",
+    badgeColor: "bg-teal-500/10 text-teal-300 border-teal-500/20",
   },
   {
     key: "backend" as const,
     title: "Backend",
     icon: Database,
-    gradient: "from-violet-500/20 to-purple-500/20",
-    badgeColor: "bg-violet-500/10 text-violet-300 border-violet-500/20",
+    gradient: "from-emerald-500/20 to-green-500/20",
+    badgeColor: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
   },
   {
     key: "infra" as const,
@@ -53,7 +53,7 @@ export function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass rounded-2xl p-6 hover:border-indigo-500/20 transition-colors"
+                className="glass rounded-2xl p-6 hover:border-teal-500/20 transition-colors"
               >
                 {/* Category header */}
                 <div className="flex items-center gap-3 mb-5">

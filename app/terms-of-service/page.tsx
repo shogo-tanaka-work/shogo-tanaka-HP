@@ -53,11 +53,11 @@ export default function TermsOfServicePage() {
         <h3 className="text-md font-medium text-foreground mb-2">3.3 TikTokの規約への準拠</h3>
         <p>
           当サービスの利用にあたっては、TikTokの
-          <a href="https://www.tiktok.com/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 underline">
+          <a href="https://www.tiktok.com/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:text-teal-300 underline">
             利用規約
           </a>
           および
-          <a href="https://www.tiktok.com/community-guidelines" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 underline">
+          <a href="https://www.tiktok.com/community-guidelines" target="_blank" rel="noopener noreferrer" className="text-teal-400 hover:text-teal-300 underline">
             コミュニティガイドライン
           </a>
           も遵守していただく必要があります。
@@ -179,7 +179,7 @@ export default function TermsOfServicePage() {
           <p className="mb-1"><strong className="text-foreground">サービス名：</strong>shogoworks</p>
           <p className="mb-1"><strong className="text-foreground">運営者：</strong>田中省伍</p>
           <p><strong className="text-foreground">お問い合わせ：</strong>
-            <a href="/" className="text-indigo-400 hover:text-indigo-300 underline">
+            <a href="/" className="text-teal-400 hover:text-teal-300 underline">
               トップページのお問い合わせフォーム
             </a>
             よりご連絡ください
