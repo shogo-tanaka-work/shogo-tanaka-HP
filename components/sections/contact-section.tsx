@@ -1,23 +1,23 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { socialLinks } from "@/data"
+import { Mail, Send } from "lucide-react"
+import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
 export function ContactSection() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [status, setStatus] = useState<null | "idle" | "sending" | "ok" | "error">("idle")
+  const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle")
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     if (status === "ok") {
-      const timer = setTimeout(() => {
-        setStatus("idle")
-      }, 3000)
+      const timer = setTimeout(() => setStatus("idle"), 3000)
       return () => clearTimeout(timer)
     }
   }, [status])
@@ -42,50 +42,156 @@ export function ContactSection() {
       setName("")
       setEmail("")
       setMessage("")
-    } catch (e) {
+    } catch {
       setError("送信に失敗しました")
       setStatus("error")
     }
   }
 
   return (
-    <div className="mb-8">
-      <h2 className="text-lg font-bold text-white mb-4 text-center">お問い合わせ</h2>
-      <Card
-        className="border backdrop-blur-sm"
-        style={{ backgroundColor: "rgba(51, 51, 51, 0.6)", borderColor: "rgba(212, 175, 55, 0.2)" }}
-      >
-        <form onSubmit={submit} className="p-4 space-y-3">
-          <Input placeholder="お名前" value={name} onChange={(e) => setName(e.target.value)} required />
-          <Input type="email" placeholder="メールアドレス" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          <Textarea placeholder="お問い合わせ内容" value={message} onChange={(e) => setMessage(e.target.value)} required rows={5} />
-          <div className="flex justify-center">
-            <Button 
-              type="submit" 
-              disabled={status === "sending"}
-              className="px-8 py-5 text-base font-semibold transition-all duration-200 hover:scale-105 rounded-lg"
-              style={{
-                background: "linear-gradient(135deg, #D4AF37 0%, #FFD700 100%)",
-                color: "#2b2b2b",
-                boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)",
-              }}
-              onMouseEnter={(e) => {
-                if (status !== "sending") {
-                  e.currentTarget.style.boxShadow = "0 6px 20px rgba(212, 175, 55, 0.4)"
-                }
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 4px 15px rgba(212, 175, 55, 0.3)"
-              }}
-            >
-              {status === "sending" ? "送信中..." : "送信"}
-            </Button>
-          </div>
-          {status === "ok" && <p className="text-xs text-green-400">送信しました。ご連絡ありがとうございます。</p>}
-          {status === "error" && <p className="text-xs text-red-400">{error}</p>}
-        </form>
-      </Card>
-    </div>
+    <section id="contact" className="py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold text-foreground mb-3">Contact</h2>
+          <p className="text-muted-foreground">お気軽にお問い合わせください</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          {/* Left: Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className="md:col-span-2 space-y-6"
+          >
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                お仕事のご相談
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Web開発・AI導入支援・セミナーなど、
+                まずはお気軽にお問い合わせください。
+                初回のご相談は無料です。
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <div className="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 text-indigo-400" />
+                </div>
+                <span>お問い合わせフォームからどうぞ</span>
+              </div>
+            </div>
+
+            {/* SNS Links */}
+            <div>
+              <p className="text-sm font-medium text-foreground mb-3">SNS</p>
+              <div className="flex gap-3">
+                {socialLinks.map((link) => {
+                  const IconComponent = link.icon
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-lg bg-white/5 hover:bg-indigo-500/10 flex items-center justify-center text-muted-foreground hover:text-indigo-400 transition-colors"
+                      aria-label={link.name}
+                    >
+                      <IconComponent className="w-4 h-4" />
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right: Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="md:col-span-3"
+          >
+            <div className="glass rounded-2xl p-6">
+              <form onSubmit={submit} className="space-y-4">
+                <div>
+                  <label htmlFor="contact-name" className="text-sm font-medium text-foreground mb-1.5 block">
+                    お名前
+                  </label>
+                  <Input
+                    id="contact-name"
+                    placeholder="田中 太郎"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    className="bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-indigo-500/20 placeholder:text-muted-foreground/50"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="contact-email" className="text-sm font-medium text-foreground mb-1.5 block">
+                    メールアドレス
+                  </label>
+                  <Input
+                    id="contact-email"
+                    type="email"
+                    placeholder="your@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-indigo-500/20 placeholder:text-muted-foreground/50"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="contact-message" className="text-sm font-medium text-foreground mb-1.5 block">
+                    お問い合わせ内容
+                  </label>
+                  <Textarea
+                    id="contact-message"
+                    placeholder="ご相談内容をお書きください"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    rows={5}
+                    className="bg-white/5 border-white/10 focus:border-indigo-500/50 focus:ring-indigo-500/20 placeholder:text-muted-foreground/50 resize-none"
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  disabled={status === "sending"}
+                  className="w-full bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white border-0 shadow-lg shadow-indigo-500/25 py-5"
+                >
+                  {status === "sending" ? (
+                    "送信中..."
+                  ) : (
+                    <>
+                      送信する
+                      <Send className="ml-2 h-4 w-4" />
+                    </>
+                  )}
+                </Button>
+                {status === "ok" && (
+                  <p className="text-sm text-emerald-400 text-center">
+                    送信しました。ご連絡ありがとうございます。
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-sm text-red-400 text-center">{error}</p>
+                )}
+              </form>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
   )
 }
-

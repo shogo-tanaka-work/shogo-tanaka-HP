@@ -42,3 +42,20 @@ export interface SkillsByCategory {
   backend: SkillItem[]
   infra: SkillItem[]
 }
+
+export interface StatItem {
+  value: string
+  label: string
+  description?: string
+}
+
+export interface ServiceItem {
+  title: string
+  description: string
+  icon: any
+}
+
+export interface NavItem {
+  label: string
+  href: string
+}

@@ -1,5 +1,5 @@
-import type { Seminar, SkillsByCategory, SocialLink, TeachingExperience, WebApp } from "@/types"
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react"
+import type { NavItem, Seminar, ServiceItem, SkillsByCategory, SocialLink, StatItem, TeachingExperience, WebApp } from "@/types"
+import { Bot, Code, Github, GraduationCap, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export const socialLinks: SocialLink[] = [
   {
@@ -82,7 +82,6 @@ export const skills: SkillsByCategory = {
     { name: "React/Next.js", level: 3 },
     { name: "Sass", level: 2 },
     { name: "Tailwind CSS", level: 2 },
-
   ],
   backend: [
     { name: "Node.js", level: 3 },
@@ -105,3 +104,36 @@ export const skills: SkillsByCategory = {
     { name: "AWS", level: 1 },
   ],
 }
+
+export const stats: StatItem[] = [
+  { value: "3+", label: "年の開発経験", description: "Web開発・システム構築" },
+  { value: "100+", label: "名の指導実績", description: "AI活用・プログラミング研修" },
+  { value: "10+", label: "回のセミナー開催", description: "ChatGPT・AI活用セミナー" },
+  { value: "5+", label: "件のプロジェクト", description: "Webアプリ・業務システム" },
+]
+
+export const services: ServiceItem[] = [
+  {
+    title: "Web開発",
+    description: "Next.js / React を中心に、要件定義から設計・実装・運用まで対応。モダンな技術スタックで高品質なWebアプリケーションを構築します。",
+    icon: Code,
+  },
+  {
+    title: "AI導入支援",
+    description: "企業のAI活用をサポート。ChatGPT / Dify 等を活用した業務効率化や、AIツールの選定・導入コンサルティングを行います。",
+    icon: Bot,
+  },
+  {
+    title: "セミナー・研修",
+    description: "企業・個人向けにAI活用セミナーや技術研修を開催。実践的なハンズオン形式で、すぐに業務に活かせるスキルを提供します。",
+    icon: GraduationCap,
+  },
+]
+
+export const navItems: NavItem[] = [
+  { label: "サービス", href: "#services" },
+  { label: "実績", href: "#portfolio" },
+  { label: "スキル", href: "#skills" },
+  { label: "講師実績", href: "#teaching" },
+  { label: "お問い合わせ", href: "#contact" },
+]
